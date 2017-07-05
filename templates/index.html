@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <body>
+
+    <div class="container">
+
+      <div class="form-wrapper">
+
+        <i class="fa fa-user-o" aria-hidden="true"></i>
+
+        <h1>New Account</h1>
+
+        <form action="/signup" method="POST">
+
+          <!-- <label class="fa fa-user-o fa-fw" aria-hidden="true"></label> -->
+          <input type="text" name="username" value="{{username}}" placeholder="Username" required/>
+          <p class="error">{{username_error}}</p>
+
+          <!-- <label class="fa fa-lock fa-fw" aria-hidden="true"></label> -->
+          <input type="text" name="password" value="{{password}}" placeholder="Password" required/>
+          <p class="error">{{password_error}}</p>
+
+          <!-- <label class="fa fa-check fa-fw" aria-hidden="true"></label> -->
+          <input type="text" name="verify" value="{{verify}}" placeholder="Verify Password" required/>
+          <p class="error">{{verify_error}}</p>
+
+          <!-- <label class="fa fa-envelope-o fa-fw" aria-hidden="true"></label> -->
+          <input type="text" name="email" value="{{email}}" placeholder="Email"/>
+          <p class="error">{{email_error}}</p>
+
+          <input type="submit" name="submit" value="Sign Up">
+
+        </form>
+
+        <p>Already have an account? <a href="/">Sign In</a></p>
+
+      </div>
+
+    </div>
+
+  </body>
+
+{% endblock %}
