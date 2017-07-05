@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/wow.css") }}"/>
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/styles.css") }}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Trying to link css stylesheet from static folder. Until an appropriate fix, I'm using style tags. -->
+    <style>
+
+      /* SIGN UP PAGE STYLING */
+      body {
+        background-color: #2b323c;
+      }
+
+      form {
+        width: 100%;
+      }
+
+      i.fa {
+        color: #fff;
+        display: block;
+        margin: 0 auto;
+        font-size: 28px;
+        text-align: center;
+      }
+
+      p, a  {
+        color: #484e5a;
+        font-size: 14px;
+        text-align: center;
+        margin: 20px 0 0 0;
+      }
+
+      a:hover {
+        color: #fff;
+        text-decoration: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        transition: 0.25s ease-in-out;
+        -o-transition: 0.25s ease-in-out;
+        -ms-transition: 0.25s ease-in-out;
+        -moz-transition: 0.25s ease-in-out;
+        -webkit-transition: 0.25s ease-in-out;
+      }
+
+      .error {
+        color: #fff;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      .container {
+        top: 50%;
+        left: 50%;
+        border: 0px;
+        width: 450px;
+        margin: 0 auto;
+        display: block;
+        position: fixed;
+        padding: 100px 0;
+        -webkit-border-radius: 10px;
+        box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.20);
+        transform: translate(-50%, -50%)
+      }
+
+      .form-wrapper {
+        width: 350px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .form-wrapper h1 {
+        color: #fff;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: 5px;
+        padding-bottom: 20px;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      input[type=text] {
+        border: 0;
+        outline: 0;
+        color: #fff;
+        width: 100%;
+        float: right;
+        padding: 5px;
+        margin: 15px 0;
+        background: transparent;
+        border-bottom: 1px solid #313842;
+        font-family: 'Roboto', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      input[type=text]:focus {
+        border-color: #74a7ff;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      input[type=submit] {
+        color: #fff;
+        width: 100%;
+        border: 0 none;
+        font-size: 14px;
+        cursor: pointer;
+        font-weight: 300;
+        padding: 15px 15px;
+        margin: 40px 0 0 0;
+        border-radius: 10px;
+        letter-spacing: 5px;
+        background: #74a7ff;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        -webkit-border-radius: 5px;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      input[type=submit]:hover {
+        background: #383e4a;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        transition: 0.25s ease-in-out;
+        -o-transition: 0.25s ease-in-out;
+        -ms-transition: 0.25s ease-in-out;
+        -moz-transition: 0.25s ease-in-out;
+        -webkit-transition: 0.25s ease-in-out;
+      }
+
+      /* WELCOME PAGE STYLING */
+      .welcome-wrapper {
+        top: 50%;
+        left: 50%;
+        margin: 0 auto;
+        display: block;
+        position: fixed;
+        transform: translate(-50%, -50%)
+      }
+
+      .welcome-wrapper h1 {
+        color: #fff;
+        width: 100%;
+        font-size: 32px;
+        font-weight: 300;
+        text-align: center;
+        padding-bottom: 25px;
+        font-family: 'Roboto', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+    </style>
+
+  </head>
+
+  {% block content %}
+
+  {% endblock%}
+
+</html>
