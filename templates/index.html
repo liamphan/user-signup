@@ -1,33 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
   <body>
 
-    <div class="container">
+    <div class="container wow fadeIn" data-wow-duration="3s" data-wow-delay="0.25s">
 
       <div class="form-wrapper">
 
         <i class="fa fa-user-o" aria-hidden="true"></i>
 
-        <h1>New Account</h1>
+        <h1>Create New Account</h1>
 
         <form action="/signup" method="POST">
 
           <!-- <label class="fa fa-user-o fa-fw" aria-hidden="true"></label> -->
-          <input type="text" name="username" value="{{username}}" placeholder="Username" required/>
+          <input class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0.40s" type="text" name="username" value="{{username}}" placeholder="Username" required/>
           <p class="error">{{username_error}}</p>
 
           <!-- <label class="fa fa-lock fa-fw" aria-hidden="true"></label> -->
-          <input type="text" name="password" value="{{password}}" placeholder="Password" required/>
+          <input class="wow fadeIn" data-wow-duration="3s" data-wow-delay="0.60s" type="password" name="password" value="{{password}}" placeholder="Password" required/>
           <p class="error">{{password_error}}</p>
 
           <!-- <label class="fa fa-check fa-fw" aria-hidden="true"></label> -->
-          <input type="text" name="verify" value="{{verify}}" placeholder="Verify Password" required/>
+          <input class="wow fadeIn" data-wow-duration="4s" data-wow-delay="0.80s" type="password" name="verify" value="{{verify}}" placeholder="Verify Password" required/>
           <p class="error">{{verify_error}}</p>
 
           <!-- <label class="fa fa-envelope-o fa-fw" aria-hidden="true"></label> -->
-          <input type="text" name="email" value="{{email}}" placeholder="Email"/>
+          <input class="wow fadeIn" data-wow-duration="5s" data-wow-delay="1s" type="text" name="email" value="{{email}}" placeholder="Email (Optional)"/>
           <p class="error">{{email_error}}</p>
 
           <input type="submit" name="submit" value="Sign Up">
@@ -40,6 +39,11 @@
 
     </div>
 
-  </body>
+    <div class="footer">
 
+      <p>Created using Python, Flask, &amp; designed by Bill Phan</p>
+
+    </div>
+
+  </body>
 {% endblock %}

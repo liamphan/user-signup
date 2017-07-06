@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+  <body>
 
-  <div class="welcome-wrapper">
+    <div class="welcome-wrapper wow fadeIn" data-wow-duration="3s" data-wow-delay="0.25s">
 
-    <h1>Welcome, {{username}}!</h1>
+      <h1>Welcome, {{username}}!</h1>
 
-    <p>Return to<a href="/"> sign up</a>.</p>
+      <p class="wow fadeIn" data-wow-duration="3s" data-wow-delay="0.50s">Return to<a href="/"> sign up</a>.</p>
 
-  </div>
+    </div>
 
+  </body>
 {% endblock %}
