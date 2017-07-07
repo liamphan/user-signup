@@ -111,7 +111,7 @@ def signup():
     if email != "":
         # Used regex for further validating email.
         if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
-                email_error = " That's not a valid email"
+                email_error = "Not a valid email address."
 
         # if len(email) < 3 or len(email) > 20:
         #     email_error = "Email must be between 3 and 20 characters long."
