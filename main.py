@@ -101,22 +101,26 @@ def signup():
         password_error = "Password must be between 3 and 20 characters long."
     elif " " in password:
         password_error = "Your password cannot contain any spaces."
+
     # Verify Passwords
-    elif password != "":
-        if verify == "" or verify != password:
-            verify_error = "Passwords do not match. Please try again."
-            verify = ""
+    if verify == "" or verify != password:
+        verify_error = "Passwords do not match. Please try again."
+        verify = ""
 
     # Validate Email
     if email != "":
-        if len(email) < 3 or len(email) > 20:
-            email_error = "Email must be between 3 and 20 characters long."
-            email = ""
-        elif " " in email:
-            email_error = "Your email cannot contain any spaces."
-            email = ""
-        elif email.count("@") != 1 or email.count(".") != 1:
-            email_error = "Not a valid email address."
+        # Used regex for further validating email.
+        if not re.match(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email):
+                email_error = " That's not a valid email"
+
+        # if len(email) < 3 or len(email) > 20:
+        #     email_error = "Email must be between 3 and 20 characters long."
+        #     email = ""
+        # elif " " in email:
+        #     email_error = "Your email cannot contain any spaces."
+        #     email = ""
+        # elif email.count("@") != 1 or email.count(".") != 1:
+        #     email_error = "Not a valid email address."
 
     # Welcome and success confirmation page!
     if not username_error and not password_error and not verify_error and not email_error:
